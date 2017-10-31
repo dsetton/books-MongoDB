@@ -24,6 +24,6 @@ db.runCommand({
         }
     },
 
-    upsert: true,
+    upsert: false,
     new: true
 } );

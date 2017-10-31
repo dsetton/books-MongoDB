@@ -12,8 +12,6 @@ var dataUpdated = {
     "nome_livro" : "Livro 1HDHDHDHDHDHHDHD"
 }
 
-
-
 db.runCommand({
     findAndModify: "books",
     query: { "_id" : data._id},
@@ -24,6 +22,6 @@ db.runCommand({
         }
     },
 
-    upsert: true,
+    upsert: false,
     new: true
 } );

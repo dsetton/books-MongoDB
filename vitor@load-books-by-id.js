@@ -10,7 +10,6 @@ var data = {
 
 db.runCommand({
     aggregate: "books",
-    $query: { "_id" : data._id},
     
     pipeline: [
         {

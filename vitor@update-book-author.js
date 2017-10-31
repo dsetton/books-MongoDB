@@ -1,5 +1,9 @@
+//UPDATE
+
+var _inputID = 150948232.0
+
 var data = {
-    "_id" : 15.0,
+    "_id" : _inputID,
     "nome_livro" : "Livro 14",
     "nome_autor" : "Rafael Falcão",
     "tipo" : "e-book",
@@ -9,7 +13,16 @@ var data = {
 }
 
 var dataUpdated = {
-    "nome_autor" : "Daiane Falcao"
+    "nome_autor" : 
+        [
+            //"asdfas", "sdfasdf", "hbkqkas"
+            {autor_1: "Daniel"},
+            {autor_2: "Bruna"},
+            {autor_3: "Luiz"},
+            {autor_4: "Alexandre"},
+            {autor_5: "Leo"},
+            {autor_6: "André"}
+        ],
 }
 
 db.runCommand({

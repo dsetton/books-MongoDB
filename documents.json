@@ -1,3 +1,4 @@
+/*-------------------------------(AUTOR == 1)------------------------------*/
 /* 1 */
 {
     "_id" : 1.0,
@@ -150,4 +151,185 @@
     "isbn" : "721-381-028-34",
     "editora" : "Editora 7",
     "n_paginas" : 1050.0
+}
+
+/*-------------------------------(AUTORES > 1)------------------------------*/
+/* 1 */
+{
+    "_id" : 150947978.0,
+    "nome_livro" : "Livro X",
+    "nome_autor" : [ 
+        {
+            "autor_1" : "Vitor Cruz"
+        }, 
+        {
+            "autor_2" : "Andrade Cruz"
+        }, 
+        {
+            "autor_3" : "Vitor Andrade"
+        }
+    ],
+    "tipo" : "e-book",
+    "isbn" : "829-183-129-63",
+    "editora" : "Editora Abril",
+    "n_paginas" : 182.0
+}
+
+/* 2 */
+{
+    "_id" : 150947996.0,
+    "nome_livro" : "Livro 150947996",
+    "nome_autor" : [ 
+        {
+            "autor_1" : "Autor 1"
+        }, 
+        {
+            "autor_2" : "Autor 2"
+        }, 
+        {
+            "autor_3" : "Autor 3"
+        }, 
+        {
+            "autor_4" : "Autor 4"
+        }, 
+        {
+            "autor_5" : "Autor 5"
+        }
+    ],
+    "tipo" : "e-book",
+    "isbn" : "829-183-129-63",
+    "editora" : "Editora Abril",
+    "n_paginas" : 182.0
+}
+
+/* 3 */
+{
+    "_id" : 150948184.0,
+    "nome_livro" : "Livro 150948184",
+    "nome_autor" : [ 
+        {
+            "autor_1" : "Autor A_1"
+        }, 
+        {
+            "autor_2" : "Autor B_5"
+        }, 
+        {
+            "autor_3" : "Autor C_5"
+        }, 
+        {
+            "autor_4" : "Autor D_7"
+        }, 
+        {
+            "autor_5" : "Autor E_4"
+        }
+    ],
+    "tipo" : "paperback",
+    "isbn" : "573-866-322-71",
+    "editora" : "Editora 11",
+    "n_paginas" : 834.0
+}
+
+/* 4 */
+{
+    "_id" : 150948195.0,
+    "nome_livro" : "Livro 150948195",
+    "nome_autor" : [ 
+        {
+            "autor_1" : "Autor A_2"
+        }, 
+        {
+            "autor_2" : "Autor B_9"
+        }, 
+        {
+            "autor_3" : "Autor C_0"
+        }, 
+        {
+            "autor_4" : "Autor D_9"
+        }, 
+        {
+            "autor_5" : "Autor E_3"
+        }
+    ],
+    "tipo" : "paperback",
+    "isbn" : "802-820-721-87",
+    "editora" : "Editora 12",
+    "n_paginas" : 578.0
+}
+
+/* 5 */
+{
+    "_id" : 150948197.0,
+    "nome_livro" : "Livro 150948197",
+    "nome_autor" : [ 
+        {
+            "autor_1" : "Vitor Cruz"
+        }, 
+        {
+            "autor_2" : "Andrade Cruz"
+        }, 
+        {
+            "autor_3" : "Vitor Andrade"
+        }
+    ],
+    "tipo" : "paperback",
+    "isbn" : "78-574-642-11",
+    "editora" : "Editora 3",
+    "n_paginas" : 855.0
+}
+
+/* 6 */
+{
+    "_id" : 150948231.0,
+    "nome_livro" : "Livro 150948231",
+    "nome_autor" : [ 
+        {
+            "autor_1" : "Autor A_2"
+        }, 
+        {
+            "autor_2" : "Autor B_5"
+        }, 
+        {
+            "autor_3" : "Autor C_9"
+        }, 
+        {
+            "autor_4" : "Autor D_6"
+        }, 
+        {
+            "autor_5" : "Autor E_3"
+        }
+    ],
+    "tipo" : "paperback",
+    "isbn" : "374-230-191-33",
+    "editora" : "Editora 5",
+    "n_paginas" : 685.0
+}
+
+/* 7 */
+{
+    "_id" : 150948232.0,
+    "nome_livro" : "Livro 150948232",
+    "nome_autor" : [ 
+        {
+            "autor_1" : "Daniel"
+        }, 
+        {
+            "autor_2" : "Bruna"
+        }, 
+        {
+            "autor_3" : "Luiz"
+        }, 
+        {
+            "autor_4" : "Alexandre"
+        }, 
+        {
+            "autor_5" : "Leo"
+        }, 
+        {
+            "autor_6" : "André"
+        }
+    ],
+    "tipo" : "hardcover",
+    "isbn" : "605-405-976-67",
+    "editora" : "Editora 7",
+    "n_paginas" : 71.0
 }

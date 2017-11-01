@@ -14,11 +14,11 @@ var dataUpdat = {
     "nome_autor" : 
         [
             //"asdfas", "sdfasdf", "hbkqkas"
-            {autor_1: "Autor A_" + range(10) },
-            {autor_2: "Autor B_" + range(10) },
-            {autor_3: "Autor C_" + range(10) },
-            {autor_4: "Autor D_" + range(10) },
-            {autor_5: "Autor E_" + range(10) }
+            {autor: "Autor A_" + range(10) },
+            {autor: "Autor B_" + range(10) },
+            {autor: "Autor C_" + range(10) },
+            {autor: "Autor D_" + range(10) },
+            {autor: "Autor E_" + range(10) }
         ],
     "tipo" : _array_BookTypes[range(4)],
     "isbn" : _isbn,

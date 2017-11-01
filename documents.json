@@ -1,335 +1,139 @@
-/*-------------------------------(AUTOR == 1)------------------------------*/
-/* 1 */
-{
-    "_id" : 1.0,
-    "nome_livro" : "Livro 1",
-    "nome_autor" : "Autor NOVO",
-    "tipo" : "pocket book",
-    "isbn" : "192-182-381-38",
-    "editora" : "Editora 1",
-    "n_paginas" : 100.0
-}
+[
+    /* 1 */
+    {
+        "_id" : 150953952.0,
+        "nome_livro" : "Livro 150953952",
+        "nome_autor" : [ 
+            {
+                "autor" : "Daniel"
+            }, 
+            {
+                "autor" : "Bruna"
+            }, 
+            {
+                "autor" : "Luiz"
+            }, 
+            {
+                "autor" : "Alexandre"
+            }, 
+            {
+                "autor" : "Leo"
+            }, 
+            {
+                "autor" : "André"
+            }
+        ],
+        "tipo" : "paperback",
+        "isbn" : "248-540-360-37",
+        "editora" : "Editora 0",
+        "n_paginas" : 164.0
+    },
 
-/* 2 */
-{
-    "_id" : 2.0,
-    "nome_livro" : "Livro 2",
-    "nome_autor" : "Autor 2",
-    "tipo" : "e-book",
-    "isbn" : "912-849-278-17",
-    "editora" : "Editora 2",
-    "n_paginas" : 200.0
-}
+    /* 2 */
+    {
+        "_id" : 150953955.0,
+        "nome_livro" : "Livro 150953955",
+        "nome_autor" : [ 
+            {
+                "autor" : "Vitor Cruz"
+            }, 
+            {
+                "autor" : "Daiane Eustaquio"
+            }
+        ],
+        "tipo" : "e-book",
+        "isbn" : "524-308-272-39",
+        "editora" : "Editora 0",
+        "n_paginas" : 452.0
+    },
 
-/* 3 */
-{
-    "_id" : 3.0,
-    "nome_livro" : "Livro 3",
-    "nome_autor" : "Autor 3",
-    "tipo" : "pocket book",
-    "isbn" : "281-837-172-31",
-    "editora" : "Editora 3",
-    "n_paginas" : 300.0
-}
+    /* 3 */
+    {
+        "_id" : 150953956.0,
+        "nome_livro" : "Livro 150953956",
+        "nome_autor" : [ 
+            {
+                "autor" : "Autor A_7"
+            }, 
+            {
+                "autor" : "Daiane Eustaquio"
+            }, 
+            {
+                "autor" : "Autor E_9"
+            }
+        ],
+        "tipo" : "hardcover",
+        "isbn" : "503-396-313-8",
+        "editora" : "Editora 0",
+        "n_paginas" : 835.0
+    },
 
-/* 4 */
-{
-    "_id" : 4.0,
-    "nome_livro" : "Livro Mitologia Nórdica",
-    "nome_autor" : "Autor 4",
-    "tipo" : "paperback",
-    "isbn" : "719-395-871-72",
-    "editora" : "Editora 4",
-    "n_paginas" : 400.0
-}
+    /* 4 */
+    {
+        "_id" : 150953971.0,
+        "nome_livro" : "Livro 150953971",
+        "nome_autor" : [ 
+            {
+                "autor" : "Autor A_3"
+            }, 
+            {
+                "autor" : "Autor B_3"
+            }, 
+            {
+                "autor" : "Autor C_2"
+            }, 
+            {
+                "autor" : "Autor D_2"
+            }, 
+            {
+                "autor" : "Autor E_9"
+            }
+        ],
+        "tipo" : "paperback",
+        "isbn" : "826-285-463-20",
+        "editora" : "Editora 12",
+        "n_paginas" : 381.0
+    },
 
-/* 5 */
-{
-    "_id" : 5.0,
-    "nome_livro" : "Livro 5",
-    "nome_autor" : "Autor 5",
-    "tipo" : "e-book",
-    "isbn" : "276-584-717-23",
-    "editora" : "Editora 5",
-    "n_paginas" : 500.0
-}
+    /* 5 */
+    {
+        "_id" : 150953972.0,
+        "nome_livro" : "Livro 150953972",
+        "nome_autor" : [ 
+            {
+                "autor" : "Autor A_7"
+            }, 
+            {
+                "autor" : "Vitor Cruz"
+            }
+        ],
+        "tipo" : "paperback",
+        "isbn" : "695-66-853-8",
+        "editora" : "Editora 14",
+        "n_paginas" : 333.0
+    },
 
-/* 6 */
-{
-    "_id" : 6.0,
-    "nome_livro" : "Livro 6",
-    "nome_autor" : "Autor 6",
-    "tipo" : "pocket book",
-    "isbn" : "998-478-273-44",
-    "editora" : "Editora 6",
-    "n_paginas" : 600.0
-}
-
-/* 7 */
-{
-    "_id" : 7.0,
-    "nome_livro" : "Livro 7",
-    "nome_autor" : "Vitor Cruz",
-    "tipo" : "hardcover",
-    "isbn" : "127-287-648-98",
-    "editora" : "Editora 7",
-    "n_paginas" : 700.0
-}
-
-/* 8 */
-{
-    "_id" : 8.0,
-    "nome_livro" : "Livro 8",
-    "nome_autor" : "Autor 8",
-    "tipo" : "paperback",
-    "isbn" : "765-774-765-83",
-    "editora" : "Editora 8",
-    "n_paginas" : 800.0
-}
-
-/* 9 */
-{
-    "_id" : 9.0,
-    "nome_livro" : "Livro 9",
-    "nome_autor" : "Autor 9",
-    "tipo" : "paperback",
-    "isbn" : "728-847-712-64",
-    "editora" : "Editora 9",
-    "n_paginas" : 675.0
-}
-
-/* 10 */
-{
-    "_id" : 10.0,
-    "nome_livro" : "Livro 10",
-    "nome_autor" : "Autor 10",
-    "tipo" : "e-book",
-    "isbn" : "729-198-361-26",
-    "editora" : "Editora 10",
-    "n_paginas" : 750.0
-}
-
-/* 11 */
-{
-    "_id" : 11.0,
-    "nome_livro" : "Livro 11",
-    "nome_autor" : "Autor 11",
-    "tipo" : "pocket book",
-    "isbn" : "599-827-316-98",
-    "editora" : "Editora 11",
-    "n_paginas" : 825.0
-}
-
-/* 12 */
-{
-    "_id" : 12.0,
-    "nome_livro" : "Livro 12",
-    "nome_autor" : "Autor 1",
-    "tipo" : "e-book",
-    "isbn" : "110-283-891-77",
-    "editora" : "Editora 12",
-    "n_paginas" : 900.0
-}
-
-/* 13 */
-{
-    "_id" : 13.0,
-    "nome_livro" : "Livro 13",
-    "nome_autor" : "Autor 4",
-    "tipo" : "e-book",
-    "isbn" : "819-747-189-31",
-    "editora" : "Editora 5",
-    "n_paginas" : 975.0
-}
-
-/* 14 */
-{
-    "_id" : 14.0,
-    "nome_livro" : "Livro 14",
-    "nome_autor" : "Autor 2",
-    "tipo" : "e-book",
-    "isbn" : "721-381-028-34",
-    "editora" : "Editora 7",
-    "n_paginas" : 1050.0
-}
-
-/*-------------------------------(AUTORES > 1)------------------------------*/
-/* 1 */
-{
-    "_id" : 150947978.0,
-    "nome_livro" : "Livro X",
-    "nome_autor" : [ 
-        {
-            "autor_1" : "Vitor Cruz"
-        }, 
-        {
-            "autor_2" : "Andrade Cruz"
-        }, 
-        {
-            "autor_3" : "Vitor Andrade"
-        }
-    ],
-    "tipo" : "e-book",
-    "isbn" : "829-183-129-63",
-    "editora" : "Editora Abril",
-    "n_paginas" : 182.0
-}
-
-/* 2 */
-{
-    "_id" : 150947996.0,
-    "nome_livro" : "Livro 150947996",
-    "nome_autor" : [ 
-        {
-            "autor_1" : "Autor 1"
-        }, 
-        {
-            "autor_2" : "Autor 2"
-        }, 
-        {
-            "autor_3" : "Autor 3"
-        }, 
-        {
-            "autor_4" : "Autor 4"
-        }, 
-        {
-            "autor_5" : "Autor 5"
-        }
-    ],
-    "tipo" : "e-book",
-    "isbn" : "829-183-129-63",
-    "editora" : "Editora Abril",
-    "n_paginas" : 182.0
-}
-
-/* 3 */
-{
-    "_id" : 150948184.0,
-    "nome_livro" : "Livro 150948184",
-    "nome_autor" : [ 
-        {
-            "autor_1" : "Autor A_1"
-        }, 
-        {
-            "autor_2" : "Autor B_5"
-        }, 
-        {
-            "autor_3" : "Autor C_5"
-        }, 
-        {
-            "autor_4" : "Autor D_7"
-        }, 
-        {
-            "autor_5" : "Autor E_4"
-        }
-    ],
-    "tipo" : "paperback",
-    "isbn" : "573-866-322-71",
-    "editora" : "Editora 11",
-    "n_paginas" : 834.0
-}
-
-/* 4 */
-{
-    "_id" : 150948195.0,
-    "nome_livro" : "Livro 150948195",
-    "nome_autor" : [ 
-        {
-            "autor_1" : "Autor A_2"
-        }, 
-        {
-            "autor_2" : "Autor B_9"
-        }, 
-        {
-            "autor_3" : "Autor C_0"
-        }, 
-        {
-            "autor_4" : "Autor D_9"
-        }, 
-        {
-            "autor_5" : "Autor E_3"
-        }
-    ],
-    "tipo" : "paperback",
-    "isbn" : "802-820-721-87",
-    "editora" : "Editora 12",
-    "n_paginas" : 578.0
-}
-
-/* 5 */
-{
-    "_id" : 150948197.0,
-    "nome_livro" : "Livro 150948197",
-    "nome_autor" : [ 
-        {
-            "autor_1" : "Vitor Cruz"
-        }, 
-        {
-            "autor_2" : "Andrade Cruz"
-        }, 
-        {
-            "autor_3" : "Vitor Andrade"
-        }
-    ],
-    "tipo" : "paperback",
-    "isbn" : "78-574-642-11",
-    "editora" : "Editora 3",
-    "n_paginas" : 855.0
-}
-
-/* 6 */
-{
-    "_id" : 150948231.0,
-    "nome_livro" : "Livro 150948231",
-    "nome_autor" : [ 
-        {
-            "autor_1" : "Autor A_2"
-        }, 
-        {
-            "autor_2" : "Autor B_5"
-        }, 
-        {
-            "autor_3" : "Autor C_9"
-        }, 
-        {
-            "autor_4" : "Autor D_6"
-        }, 
-        {
-            "autor_5" : "Autor E_3"
-        }
-    ],
-    "tipo" : "paperback",
-    "isbn" : "374-230-191-33",
-    "editora" : "Editora 5",
-    "n_paginas" : 685.0
-}
-
-/* 7 */
-{
-    "_id" : 150948232.0,
-    "nome_livro" : "Livro 150948232",
-    "nome_autor" : [ 
-        {
-            "autor_1" : "Daniel"
-        }, 
-        {
-            "autor_2" : "Bruna"
-        }, 
-        {
-            "autor_3" : "Luiz"
-        }, 
-        {
-            "autor_4" : "Alexandre"
-        }, 
-        {
-            "autor_5" : "Leo"
-        }, 
-        {
-            "autor_6" : "André"
-        }
-    ],
-    "tipo" : "hardcover",
-    "isbn" : "605-405-976-67",
-    "editora" : "Editora 7",
-    "n_paginas" : 71.0
-}
+    /* 6 */
+    {
+        "_id" : 150953973.0,
+        "nome_livro" : "Livro 150953973",
+        "nome_autor" : [ 
+            {
+                "autor" : "Autor A_6"
+            }, 
+            {
+                "autor" : "Autor B_6"
+            }, 
+            {
+                "autor" : "Vitor Cruz"
+            }, 
+            {
+                "autor" : "Daiane Eustaquio"
+            }
+        ],
+        "tipo" : "pocket book",
+        "isbn" : "278-489-892-73",
+        "editora" : "Editora 9",
+        "n_paginas" : 341.0
+    }
+]

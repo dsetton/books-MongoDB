@@ -1,12 +1,25 @@
-//INSERT
-
-function range(numero){
-    return (Math.floor(Math.random() * numero))
-}
-
-var _idRandom = (parseInt( (new Date().getTime())/10000 ))
-var _array_BookTypes = ["hardcover", "paperback", "pocket book", "e-book"]
-//var _array_ISBN= [(range(1000)+""), (range(1000)+""), (range(1000)+""), (range(100)+"")]
-var isbn = (range(1000)+"-") + (range(1000)+"-") + (range(1000)+"-") + (range(100))
-
-console.log(isbn)
+db.sales.insert({
+    "_id" : (parseInt( (new Date().getTime()) )),
+    "soldBooks" : [
+        {
+            "isbn": "681-990-636-415",
+            "soldAt": new Date(),
+            "price": 120.0
+        },
+        {
+            "isbn": "189-398-128-39",
+            "soldAt": new Date(),
+            "price": 49.3
+        },
+        {
+            "isbn": "839-102-848-29",
+            "soldAt": new Date(),
+            "price": 91.89
+        },
+        {
+            "isbn": "172-894-712-98",
+            "soldAt": new Date(),
+            "price": 12.99
+        }
+    ]
+})

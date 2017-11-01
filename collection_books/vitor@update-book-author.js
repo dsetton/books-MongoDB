@@ -18,12 +18,8 @@ var dataUpdated = {
     "nome_autor" : 
         [
             //"asdfas", "sdfasdf", "hbkqkas"
-            {"autor": "Daniel"},
-            {"autor": "Bruna"},
-            {"autor": "Luiz"},
-            {"autor": "Alexandre"},
-            {"autor": "Leo"},
-            {"autor": "André"}
+            {"autor": "Marina"},
+            {"autor": "Felipe"}
         ],
 }
 

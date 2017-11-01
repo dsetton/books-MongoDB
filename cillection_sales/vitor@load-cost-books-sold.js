@@ -1,7 +1,7 @@
-/* var data = {
+var data = {
     "_id" : 1.0,
     "isbn" : "681-990-636-415"
-} */
+}
 
 db.runCommand({
       aggregate: "sales",

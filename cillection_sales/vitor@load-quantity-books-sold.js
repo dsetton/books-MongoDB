@@ -8,7 +8,7 @@ db.runCommand({
       pipeline: [
                     { $match: 
                         {
-                            "soldBooks.isbn": {
+                            "items.isbn": {
                                 $regex : ".*"+data.isbn+".*", $options : "i"
                             }
                         }

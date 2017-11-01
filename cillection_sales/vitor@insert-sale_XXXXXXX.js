@@ -30,16 +30,20 @@ console.log(resultado)
 
 db.sales.insert({
     "_id" : (parseInt( (new Date().getTime()) )),
-    "soldBooks" : [
+
+
+    "items" : [
         {
-            "isbn": "617-235-992-73",
+            "isbn": randomISMN(),//"617-235-992-73",
             "soldAt": new Date(),
-            "price": 120.0
+            
         },
         {
-            "isbn": "839-102-848-29",
-            "soldAt": new Date(),
-            "price": 91.89
+            "isbn": randomISMN(),//"839-102-848-29",
+            "soldAt": new Date(),            
         }
-    ]
+    ],
+    
+
+    "price": randomPrice()
 })

@@ -26,12 +26,8 @@ db.runCommand({
         },
         {
             $group: {
-                _id : {"id": "$_id" ,"total": {$sum :"$items.price"}}
-            }
-        },
-        {
-            $sort: {
-                _id : 1
+                _id : {"id": "$items.isbn" }
+                ,"total": { $sum: {$sum :"$items.price"} }
             }
         }
     ]

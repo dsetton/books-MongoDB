@@ -2,7 +2,7 @@ var data = {
     "_id" : 1509556487846.0,
     "isbn" : "681-990-636-415"
 }
-//https://stackoverflow.com/questions/28827516/aggregate-sum-values-from-two-arrays
+
 db.runCommand({
     aggregate: "sales",
     pipeline: [

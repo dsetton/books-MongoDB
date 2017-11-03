@@ -3,6 +3,8 @@
 var data = {
     "_id" : 1509556487846.0,
     "isbn" : "681-990-636-415"
+    /*,{$gte:  ["$items.soldAt", 1506826800000.0]}
+    ,{$lt:  ["$items.soldAt", 1509505199000.0]} */
 }
 
 db.runCommand({
@@ -10,9 +12,8 @@ db.runCommand({
     pipeline: [
         {
             $match: {
-                "items.isbn": {
-                    $regex : ".*"+data.isbn+".*", $options : "i"
-                }
+                "items.isbn": data.isbn,
+                "items.soldAt": { $lte: 1509505199000.0, $gte: 1506826800000.0 }
             }
         },
         
@@ -24,9 +25,10 @@ db.runCommand({
                         input: "$items",
                         as: "item",
                         cond: [
+                            
                             { $eq: [ "$$item.isbn", data.isbn ] }
-                            ,{$gte:  ["$items.soldAt", 1506826800000.0]}
-                            ,{$lt:  ["$items.soldAt", 1509505199000.0]}
+                            /*,{$gte:  ["$items.soldAt", 1506826800000.0]}
+                            ,{$lt:  ["$items.soldAt", 1509505199000.0]}*/
                         ]
                     }
                 }

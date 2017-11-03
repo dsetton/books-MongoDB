@@ -1,3 +1,5 @@
+//4 - dado um ISBN, qual o valor e a quantidade de vendas desse livro agrupado por ano e mês?
+
 var data = {
     "_id" : 1509556487846.0,
     "isbn" : "681-990-636-415"

@@ -1,4 +1,4 @@
-//INSERT
+// automaizar o INSERT
 
 function range(numero){
     return (Math.floor(Math.random() * numero))

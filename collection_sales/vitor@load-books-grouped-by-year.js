@@ -16,6 +16,7 @@ db.runCommand({
         
         {
             $project: {
+                
                 items: {
                     $filter: {
                         input: "$items",
@@ -26,8 +27,17 @@ db.runCommand({
             }
         }
         ,{
+            $unwind: "$items"
+        }
+        ,{
+            $unwind: "$items.soldAt"
+        }
+        ,{
             $group: {
-                _id : {"id": "$items.isbn" },
+                _id : {
+                    "id": "$items.isbn"
+                    ,"ano": {"$year": "$items.soldAt"}
+                },
                 "preço": { $sum: {$sum :"$items.price"} },
                 "quantidade": {$sum:1}
                 

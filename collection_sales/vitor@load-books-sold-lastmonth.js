@@ -23,7 +23,11 @@ db.runCommand({
                     $filter: {
                         input: "$items",
                         as: "item",
-                        cond: { $eq: [ "$$item.isbn", data.isbn ] }
+                        cond: [
+                            { $eq: [ "$$item.isbn", data.isbn ] }
+                            ,{$gte:  ["$items.soldAt", 1506826800000.0]}
+                            ,{$lt:  ["$items.soldAt", 1509505199000.0]}
+                        ]
                     }
                 }
             }
@@ -38,10 +42,10 @@ db.runCommand({
             $group: {
                 _id : {
                     "id": "$items.isbn"
-                    ,"lastMonth" : {
-                        //"$month" : ( new Date("$items.soldAt") )
-                        "$month" :  new Date("items.soldAt")//expected: 11, output: 8
-                    }
+                    /*,"lastMonth" : [
+                        {$gte:  ["$items.soldAt", 1506826800000.0]} ,
+                        ,{$lt:  ["$items.soldAt", 1509505199000.0]}
+                    ]*/
                     
                 }
                 ,"preço": { $sum: {$sum :"$items.price"} }

@@ -6,7 +6,7 @@ var data = {
 }
 
 db.runCommand({
-    aggregate: "sales",
+    aggregate: "sales_copy",
     pipeline: [
         {
             $match: {
@@ -38,25 +38,18 @@ db.runCommand({
             $group: {
                 _id : {
                     "id": "$items.isbn"
-                    ,"ano": {"$year": "$items.soldAt"}
-                    ,"mês" : {
-                        $gt: ISODate("2017-10-01T00:00:01.000Z"),
-                        $lt: ISODate("2017-10-31T23:59:59.000Z")                    
+                    ,"lastMonth" : {
+                        //"$month" : ( new Date("$items.soldAt") )
+                        "$month" :  new Date("items.soldAt")//expected: 11, output: 8
                     }
-                    /*,"mês": {
-                        "$month": {
-                            "$items.soldAt" : {
-                                $gt: ISODate("2017-10-01T00:00:01.000Z"),
-                                $lt: ISODate("2017-10-31T23:59:59.000Z")
-                            }
-                        }
-                    }*/
-                },
-                "preço": { $sum: {$sum :"$items.price"} },
-                "quantidade": {$sum:1}
-                
+                    
+                }
+                ,"preço": { $sum: {$sum :"$items.price"} }
+                ,"quantidade": {$sum:1}
             }
-        }//5 - dado um ISBN, qual o valor e a quantidade de vendas desse livro no mes passado?
+                
+         }
+        //5 - dado um ISBN, qual o valor e a quantidade de vendas desse livro no mes passado?
         // E traga o nome e o nome dos autores desse livro
         
     ]

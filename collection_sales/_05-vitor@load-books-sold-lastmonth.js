@@ -8,11 +8,6 @@ var data = {
 db.runCommand({
     aggregate : "sales_copy",
     pipeline: [
-        
-        /*,{ $unwind : "$items" }
-        ,{ $unwind : "$book_info" }
-        ,{ $unwind : "$book_info.nome_autor" }
-        ,{ $match : { "items.isbn" : "681-990-636-415" } }*/
         {
             $project: {
                 
@@ -40,6 +35,19 @@ db.runCommand({
                 "items.soldAt" : {
                     $gte : 1506826800000.0, $lte: 1509505199000.0
                 }
+            }
+        }
+        ,{
+            $group:{
+                _id : {
+                    "id" : "$items.isbn",
+                    "Autor(es)" : "$book_info.nome_autor.autor",
+                    "Título" : "$book_info.nome_livro",
+                    //book_info.nome_autor.autor
+                }
+                
+                ,"preço": { $sum: {$sum :"$items.price"} }
+                ,"quantidade": {$sum:1}
             }
         }
     ]

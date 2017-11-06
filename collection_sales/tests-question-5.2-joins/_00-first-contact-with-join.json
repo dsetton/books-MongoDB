@@ -7,7 +7,7 @@ db.runCommand({
                 from: "books",
                 localField: "items.isbn",
                 foreignField: "isbn",
-                as: "books_f"
+                as: "book_info"
             }
         },
         { $match : { "items.isbn" : "681-990-636-415" } }
@@ -28,7 +28,7 @@ db.runCommand({
                     "price" : 120.0
                 }
             ],
-            "books_f" : [ 
+            "book_info" : [ 
                 {
                     "_id" : 150953955.0,
                     "nome_livro" : "Livro 150953955",
@@ -71,7 +71,7 @@ db.runCommand({
                     "price" : 12.0
                 }
             ],
-            "books_f" : [ 
+            "book_info" : [ 
                 {
                     "_id" : 150953955.0,
                     "nome_livro" : "Livro 150953955",
@@ -104,7 +104,7 @@ db.runCommand({
                     "price" : 56.23
                 }
             ],
-            "books_f" : [ 
+            "book_info" : [ 
                 {
                     "_id" : 150953955.0,
                     "nome_livro" : "Livro 150953955",
@@ -142,7 +142,7 @@ db.runCommand({
                     "price" : 45.0
                 }
             ],
-            "books_f" : [ 
+            "book_info" : [ 
                 {
                     "_id" : 150953955.0,
                     "nome_livro" : "Livro 150953955",
@@ -185,7 +185,7 @@ db.runCommand({
                     "price" : 76.0
                 }
             ],
-            "books_f" : [ 
+            "book_info" : [ 
                 {
                     "_id" : 150953955.0,
                     "nome_livro" : "Livro 150953955",

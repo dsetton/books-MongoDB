@@ -52,3 +52,30 @@ db.runCommand({
         }
     ]
 })
+
+//output
+/*
+{
+    "result" : [ 
+        {
+            "_id" : {
+                "id" : [ 
+                    "681-990-636-415"
+                ],
+                "Autor(es)" : [ 
+                    [ 
+                        "Vitor Cruz", 
+                        "Daiane Eustaquio"
+                    ]
+                ],
+                "Título" : [ 
+                    "Livro 150953955"
+                ]
+            },
+            "preço" : 377.23,
+            "quantidade" : 3.0
+        }
+    ],
+    "ok" : 1.0
+}
+*/

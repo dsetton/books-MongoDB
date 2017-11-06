@@ -14,15 +14,25 @@ db.runCommand({
             $unwind: "$items"
         }
         ,{
+            $project: {
+                //id: 1, preço: 1, quantidade: 1, month: {$month: '$bday'}
+                "id": 1, "preço": 1, "quantidade": 1, "mês": {$month: '$items.soldAt'}
+            }
+        }
+        ,{
             $match: {
-                "items.isbn": data.isbn
-                ,"items.soldAt": { $lte: 1509505199000.0, $gte: 1506826800000.0 }
-                //,"items.soldAt" : { $month : Date("$items.soldAt")}
+                "items.isbn": data.isbn,
+                //"items.soldAt": { $lte: 1509505199000.0, $gte: 1506826800000.0 }
+                "items.soldAt" : 
             }
         }
         ,{
             $group: {
-                _id: data.isbn                    
+                _id: {
+                    "id":data.isbn
+                    //,"mês" : "$items.soldAt"
+                    //,"mês" : {"$month": new Date("$items.soldAt") }
+                }
                 ,"preço": { $sum: {$sum :"$items.price"} }
                 ,"quantidade": {$sum:1}
             }

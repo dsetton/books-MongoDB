@@ -1,0 +1,59 @@
+/* 1 */
+
+/* db.runCommand({
+    aggregate: "sales_copy",
+    pipeline: [
+        {$unwind: "$items"},
+        { $match: {"items.isbn" : "681-990-636-415", "items.price": {$gt: 10.0, $lt: 1000000.0 } } }
+    ]
+}) */
+
+{
+    "result" : [ 
+        {
+            "_id" : 1509556487846.0,
+            "items" : {
+                "isbn" : "681-990-636-415",
+                "soldAt" : NumberLong(1506878087846),
+                "price" : 120.0
+            }
+        },
+
+        {
+            "_id" : 1509556626827.0,
+            "items" : {
+                "isbn" : "681-990-636-415",
+                "soldAt" : NumberLong(1508554799000),
+                "price" : 192.0
+            }
+        },
+
+        {
+            "_id" : 1509556693735.0,
+            "items" : {
+                "isbn" : "681-990-636-415",
+                "soldAt" : NumberLong(1508594799000),
+                "price" : 65.23
+            }
+        },
+
+        {
+            "_id" : 1509556734770.0,
+            "items" : {
+                "isbn" : "681-990-636-415",
+                "soldAt" : NumberLong(1509556734770),
+                "price" : 45.0
+            }
+        },
+        
+        {
+            "_id" : 1509560231378.0,
+            "items" : {
+                "isbn" : "681-990-636-415",
+                "soldAt" : NumberLong(1506081831378),
+                "price" : 76.0
+            }
+        }
+    ],
+    "ok" : 1.0
+}

@@ -1,0 +1,209 @@
+db.runCommand({
+    aggregate : "sales_copy",
+    pipeline: [
+        {
+            $lookup:
+            {
+                from: "books",
+                localField: "items.isbn",
+                foreignField: "isbn",
+                as: "books_f"
+            }
+        },
+        { $match : { "items.isbn" : "681-990-636-415" } }
+    ]
+})
+
+//output
+
+/* 1 */
+{
+    "result" : [ 
+        {
+            "_id" : 1509556487846.0,
+            "items" : [ 
+                {
+                    "isbn" : "681-990-636-415",
+                    "soldAt" : NumberLong(1506878087846),
+                    "price" : 120.0
+                }
+            ],
+            "books_f" : [ 
+                {
+                    "_id" : 150953955.0,
+                    "nome_livro" : "Livro 150953955",
+                    "nome_autor" : [ 
+                        {
+                            "autor" : "Vitor Cruz"
+                        }, 
+                        {
+                            "autor" : "Daiane Eustaquio"
+                        }
+                    ],
+                    "tipo" : "e-book",
+                    "isbn" : "681-990-636-415",
+                    "editora" : "Editora 0",
+                    "n_paginas" : 452.0
+                }
+            ]
+        }, 
+        {
+            "_id" : 1509556626827.0,
+            "items" : [ 
+                {
+                    "isbn" : "681-990-636-415",
+                    "soldAt" : NumberLong(1508554799000),
+                    "price" : 192.0
+                }, 
+                {
+                    "isbn" : "189-398-128-39",
+                    "soldAt" : NumberLong(1509056626827),
+                    "price" : 52.0
+                }, 
+                {
+                    "isbn" : "839-102-848-29",
+                    "soldAt" : NumberLong(1507556626827),
+                    "price" : 92.0
+                }, 
+                {
+                    "isbn" : "172-894-712-98",
+                    "soldAt" : NumberLong(1508556626827),
+                    "price" : 12.0
+                }
+            ],
+            "books_f" : [ 
+                {
+                    "_id" : 150953955.0,
+                    "nome_livro" : "Livro 150953955",
+                    "nome_autor" : [ 
+                        {
+                            "autor" : "Vitor Cruz"
+                        }, 
+                        {
+                            "autor" : "Daiane Eustaquio"
+                        }
+                    ],
+                    "tipo" : "e-book",
+                    "isbn" : "681-990-636-415",
+                    "editora" : "Editora 0",
+                    "n_paginas" : 452.0
+                }
+            ]
+        }, 
+        {
+            "_id" : 1509556693735.0,
+            "items" : [ 
+                {
+                    "isbn" : "681-990-636-415",
+                    "soldAt" : NumberLong(1508594799000),
+                    "price" : 65.23
+                }, 
+                {
+                    "isbn" : "839-102-848-29",
+                    "soldAt" : NumberLong(1509599693735),
+                    "price" : 56.23
+                }
+            ],
+            "books_f" : [ 
+                {
+                    "_id" : 150953955.0,
+                    "nome_livro" : "Livro 150953955",
+                    "nome_autor" : [ 
+                        {
+                            "autor" : "Vitor Cruz"
+                        }, 
+                        {
+                            "autor" : "Daiane Eustaquio"
+                        }
+                    ],
+                    "tipo" : "e-book",
+                    "isbn" : "681-990-636-415",
+                    "editora" : "Editora 0",
+                    "n_paginas" : 452.0
+                }
+            ]
+        }, 
+        {
+            "_id" : 1509556734770.0,
+            "items" : [ 
+                {
+                    "isbn" : "189-398-128-39",
+                    "soldAt" : NumberLong(1509556734770),
+                    "price" : 35.0
+                }, 
+                {
+                    "isbn" : "172-894-712-98",
+                    "soldAt" : NumberLong(1509556734770),
+                    "price" : 45.0
+                }, 
+                {
+                    "isbn" : "681-990-636-415",
+                    "soldAt" : NumberLong(1509556734770),
+                    "price" : 45.0
+                }
+            ],
+            "books_f" : [ 
+                {
+                    "_id" : 150953955.0,
+                    "nome_livro" : "Livro 150953955",
+                    "nome_autor" : [ 
+                        {
+                            "autor" : "Vitor Cruz"
+                        }, 
+                        {
+                            "autor" : "Daiane Eustaquio"
+                        }
+                    ],
+                    "tipo" : "e-book",
+                    "isbn" : "681-990-636-415",
+                    "editora" : "Editora 0",
+                    "n_paginas" : 452.0
+                }
+            ]
+        }, 
+        {
+            "_id" : 1509560231378.0,
+            "items" : [ 
+                {
+                    "isbn" : "446-772-652-91",
+                    "soldAt" : NumberLong(1506881831378),
+                    "price" : 93.0
+                }, 
+                {
+                    "isbn" : "812-929-487-26",
+                    "soldAt" : NumberLong(1506881831378),
+                    "price" : 67.0
+                }, 
+                {
+                    "isbn" : "189-398-128-39",
+                    "soldAt" : NumberLong(1506881831378),
+                    "price" : 34.0
+                }, 
+                {
+                    "isbn" : "681-990-636-415",
+                    "soldAt" : NumberLong(1506081831378),
+                    "price" : 76.0
+                }
+            ],
+            "books_f" : [ 
+                {
+                    "_id" : 150953955.0,
+                    "nome_livro" : "Livro 150953955",
+                    "nome_autor" : [ 
+                        {
+                            "autor" : "Vitor Cruz"
+                        }, 
+                        {
+                            "autor" : "Daiane Eustaquio"
+                        }
+                    ],
+                    "tipo" : "e-book",
+                    "isbn" : "681-990-636-415",
+                    "editora" : "Editora 0",
+                    "n_paginas" : 452.0
+                }
+            ]
+        }
+    ],
+    "ok" : 1.0
+}

@@ -21,7 +21,11 @@ db.runCommand({
         }
         ,{
             $group: {
-                _id: data.isbn
+                _id: {
+                    "id":data.isbn
+                    //,"mês" : "$items.soldAt"
+                    //,"mês" : {"$month": new Date("$items.soldAt") }
+                }
                 ,"preço": { $sum: {$sum :"$items.price"} }
                 ,"quantidade": {$sum:1}
             }

@@ -14,11 +14,9 @@ db.runCommand({
                     $regex : ".*"+data.isbn+".*", $options : "i"
                 }
             }
-        },
-        
-        {
+        }
+        ,{
             $project: {
-                
                 items: {
                     $filter: {
                         input: "$items",
@@ -32,15 +30,19 @@ db.runCommand({
             $unwind: "$items"
         }
         ,{
-            $unwind: "$items.soldAt"
+            $project : {
+                _id : "$_id",
+                items : "$items",
+                date : {$add: [new Date(0), "$items.soldAt"]}
+            }
         }
         ,{
             $group: {
                 _id : {
-                    "id": "$items.isbn"
-                    ,"ano": {"$year": "$items.soldAt"}
+                    "isbn": "$items.isbn"
+                    ,"ano": {"$year": "$date"}
                 },
-                "preço": { $sum: {$sum :"$items.price"} },
+                "preço": { $sum :"$items.price"},
                 "quantidade": {$sum:1}
                 
             }

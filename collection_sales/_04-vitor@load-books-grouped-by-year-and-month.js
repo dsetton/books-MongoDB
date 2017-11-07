@@ -32,14 +32,18 @@ db.runCommand({
             $unwind: "$items"
         }
         ,{
-            $unwind: "$items.soldAt"
+            $project : {
+                _id : "$_id",
+                items : "$items",
+                date : {$add: [new Date(0), "$items.soldAt"]}
+            }
         }
         ,{
             $group: {
                 _id : {
-                    "id": "$items.isbn"
-                    ,"ano": {"$year": "$items.soldAt"}
-                    ,"mês": {"$month": "$items.soldAt"}
+                    "isbn": "$items.isbn"
+                    ,"ano": {"$year": "$date"}
+                    ,"mês": {"$month": "$date"}
                 },
                 "preço": { $sum: {$sum :"$items.price"} },
                 "quantidade": {$sum:1}

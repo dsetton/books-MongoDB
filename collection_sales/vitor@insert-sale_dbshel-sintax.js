@@ -22,10 +22,13 @@ for( _cont = 0; _cont < 4; _cont++){
     }
     //console.log(_isbn[_cont])
 }
+
 var resultado = ""
+
 for( _cont = 0; _cont < 4; _cont++){
     resultado += _isbn[_cont]
 }
+
 console.log(resultado)
 
 db.sales.insert({

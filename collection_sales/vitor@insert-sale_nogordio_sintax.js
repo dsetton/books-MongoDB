@@ -28,7 +28,7 @@ var dataInput = {
 }
 
 db.runCommand({
-    findAndModify: "books",
+    findAndModify: "sales_copy",
     query: { "_id" : dataInput._id},
 
     update: {

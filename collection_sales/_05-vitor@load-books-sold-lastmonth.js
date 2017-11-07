@@ -6,11 +6,18 @@ var data = {
 }
 
 db.runCommand({
-    aggregate : "sales_copy",
+    aggregate : "sales",
     pipeline: [
         {
+            $match: {
+                "items.isbn" : data.isbn,
+                "items.soldAt" : {
+                    $gte : 1506826800000.0, $lte: 1509505199000.0
+                }
+            }
+        }
+        ,{
             $project: {
-                
                 items: {
                     $filter: {
                         input: "$items",
@@ -19,8 +26,8 @@ db.runCommand({
                     }
                 }
             }
-        },
-        {
+        }
+        ,{
             $lookup:
             {
                 from: "books",
@@ -30,20 +37,11 @@ db.runCommand({
             }
         }
         ,{
-            $match: {
-                "items.isbn" : data.isbn,
-                "items.soldAt" : {
-                    $gte : 1506826800000.0, $lte: 1509505199000.0
-                }
-            }
-        }
-        ,{
             $group:{
                 _id : {
-                    "id" : "$items.isbn",
+                    "isbn" : "$items.isbn",
                     "Autor(es)" : "$book_info.nome_autor.autor",
                     "Título" : "$book_info.nome_livro",
-                    //book_info.nome_autor.autor
                 }
                 
                 ,"preço": { $sum: {$sum :"$items.price"} }
@@ -52,30 +50,3 @@ db.runCommand({
         }
     ]
 })
-
-//output
-/*
-{
-    "result" : [ 
-        {
-            "_id" : {
-                "id" : [ 
-                    "681-990-636-415"
-                ],
-                "Autor(es)" : [ 
-                    [ 
-                        "Vitor Cruz", 
-                        "Daiane Eustaquio"
-                    ]
-                ],
-                "Título" : [ 
-                    "Livro 150953955"
-                ]
-            },
-            "preço" : 377.23,
-            "quantidade" : 3.0
-        }
-    ],
-    "ok" : 1.0
-}
-*/
